@@ -12,10 +12,6 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-
-    <?php get_template_part('inc/functions/datalayer', 'info'); ?>
-
-    <!--/Google Tag Manager-->
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -30,19 +26,21 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>    
+    <?php wp_body_open(); ?>
 
     <div id="page" class="site">
 
         <!-- Header -->
-        <header id="masthead" class="site-header bg-gray-300 px-4">
+        <?php get_template_part("template-parts/top", "bar"); ?>
+        <header id="masthead" class="site-header bg-primary px-4">
+
             <div class="container mx-auto">
                 <div class="flex items-center py-4 pxsera-4">
                     <div class="sitelogo w-9/12 lg:w-4/12 ">
                         <?php
-                        $GETlogo = get_field('fps_logo_site', 'option'); ?>
+                        $GETlogo = get_field('logo', 'option'); ?>
                         <a href="<?php echo esc_url(get_bloginfo('url')); ?>">
-                            <?php if ($GETlogo) { 
+                            <?php if ($GETlogo) {
                                 fps_get_Image($GETlogo);
                             } else {
                                 echo "<h3 class='mb-0'>Logo Brand</h3>";
@@ -55,7 +53,7 @@
                     if (has_nav_menu('menu-1')) { ?>
                         <div class="site__nav site__nav--main w-full hidden lg:flex lg:justify-end">
                             <?php
-                                wp_nav_menu(array('theme_location' => 'menu-1'));
+                            wp_nav_menu(array('theme_location' => 'menu-1'));
                             ?>
                         </div>
                     <?php

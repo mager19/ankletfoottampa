@@ -4,7 +4,7 @@
 
 
 themes/baseTheme/.sass-cache/
-themes/baseTheme/node_modules/
+node_modules/
 themes/baseTheme/bower_components/
 themes/baseTheme/__MACOSX/
 themes/__MACOSX/

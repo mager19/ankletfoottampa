@@ -1,0 +1,7 @@
+.top__bar {
+    @apply bg-bg-1 h-[50px];
+
+    a {
+        @apply text-text font-semibold text-[14px];
+    }
+}
