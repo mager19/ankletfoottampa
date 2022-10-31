@@ -1340,29 +1340,101 @@ blockquote p {
   text-decoration-line: underline;
   text-decoration-color: #2a9d8f;
 }
-.footer-menu {
-  text-align: center;
+footer {
+  position: relative;
+}
+footer:after {
+        position: absolute;
+        content: url("data:image/svg+xml,%3Csvg width=%27172%27 height=%27203%27 viewBox=%270 0 172 203%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg opacity=%270.2%27 clip-path=%27url%28%23clip0_109_748%29%27%3E%3Cpath d=%27M60.5177 46.8949V19.3975C60.5177 8.70186 69.2191 0 79.9148 0C86.7369 0 92.743 3.54304 96.2022 8.88612C97.9324 7.98135 99.8514 7.50046 101.83 7.50046C108.337 7.50046 113.667 12.6328 113.986 19.0426C114.69 18.865 115.468 18.7823 116.496 18.7823C123.208 18.7823 128.668 24.2428 128.668 30.9343L128.673 31.2842C134.699 32.0072 139.387 37.1487 139.387 43.3792L139.376 44.8826C145.134 45.3333 148.41 49.3452 148.409 56.0798L148.131 69.4162C150.722 75.4521 150.956 86.8695 148.358 98.1294C147.27 102.842 145.958 106.301 144.44 110.307C141.27 118.666 136.929 130.115 131.212 162.542C125.006 197.744 107.614 203 97.7994 203C94.2385 203 91.7312 202.289 91.2326 202.136C90.3654 201.929 83.6805 200.168 77.5293 193.845C71.6421 187.792 65.1526 176.23 67.6674 155.52C72.4151 116.417 67.9739 103.317 61.1816 89.0785C60.585 87.8279 59.862 86.4906 59.0961 85.0748C56.4685 80.2163 53.199 74.1697 52.8395 67.1873C52.4822 60.2384 55.0011 53.5654 60.5177 46.8949ZM79.9148 3.51165C71.1555 3.51165 64.0293 10.6382 64.0293 19.3975V26.22H79.243C80.2126 26.22 80.9988 27.0062 80.9988 27.9758C80.9988 28.9455 80.2126 29.7317 79.243 29.7317H64.0293V43.0503C72.0883 34.9719 79.9354 31.0409 88.0072 31.0409C90.6005 31.0409 93.1677 31.4627 95.6957 32.2034L95.8006 19.3975C95.801 10.6382 88.6745 3.51165 79.9148 3.51165ZM101.83 11.0117C100.426 11.0117 99.0648 11.3517 97.8374 11.9912C98.7859 14.2784 99.3123 16.784 99.3123 19.4116L99.1974 33.4371C103.183 35.0702 107.048 37.4114 110.735 40.0691L110.49 19.6718C110.49 14.8968 106.605 11.0117 101.83 11.0117ZM116.496 22.2936C115.341 22.2936 114.783 22.3952 114.039 22.7447L114.279 42.7516C116.143 44.2265 117.953 45.7518 119.7 47.2709C121.826 49.1193 123.712 50.7197 125.402 52.119L125.157 30.9541C125.157 26.1787 121.272 22.2936 116.496 22.2936ZM128.714 34.8438L128.947 54.9887C131.852 57.2791 134.017 58.818 135.75 59.9393L135.875 43.3655C135.875 39.102 132.776 35.5569 128.714 34.8438ZM139.349 48.412L139.246 62.0111C139.584 62.1941 139.909 62.3668 140.226 62.5358C141.636 63.2861 142.982 64.0045 144.707 65.2146L144.898 56.0426C144.898 51.3076 143.076 48.8053 139.349 48.412ZM63.5955 48.6937C60.114 52.8052 57.9876 56.8804 57.0378 60.4891H79.666C80.6357 60.4891 81.4219 61.2753 81.4219 62.245C81.4219 63.2146 80.6357 64.0008 79.666 64.0008H56.414C56.2297 66.0107 56.3446 67.9409 56.6693 69.7971H69.089C70.0586 69.7971 70.8448 70.5833 70.8448 71.5529C70.8448 72.5225 70.0586 73.3087 69.089 73.3087H57.5402C58.6974 76.9542 60.5061 80.3014 62.1838 83.4037C62.9713 84.8596 63.7153 86.2353 64.3499 87.5656C71.4 102.343 76.0143 115.899 71.1522 155.943C69.8747 166.461 70.9311 175.544 74.2098 182.758H97.8576C98.8272 182.758 99.6134 183.545 99.6134 184.514C99.6134 185.484 98.8272 186.27 97.8576 186.27H76.0718C77.1852 188.084 78.4651 189.75 79.9127 191.258C85.6309 197.214 92.013 198.712 92.0721 198.725C92.127 198.737 92.1861 198.753 92.2394 198.771C92.2617 198.778 94.4943 199.488 97.7981 199.488C106.512 199.488 121.992 194.609 127.753 161.932C133.527 129.179 137.936 117.551 141.155 109.061C141.404 108.406 141.642 107.774 141.875 107.155H127.896C126.926 107.155 126.14 106.369 126.14 105.399C126.14 104.429 126.926 103.643 127.896 103.643H143.137C143.799 101.689 144.391 99.6919 144.934 97.3391C148.25 82.9719 146.31 70.7741 143.518 68.689C141.547 67.217 140.17 66.4841 138.575 65.6356C135.008 63.7384 130.57 61.3774 117.394 49.9207C105.006 39.1482 96.2166 34.5517 88.006 34.5517C80.8228 34.5517 73.6996 38.2356 66.2297 45.8142C65.3377 46.7206 64.3445 47.8092 63.5955 48.6937Z%27 fill=%27%23EDF2F4%27/%3E%3Cpath d=%27M117.302 54.4664C130.175 65.6607 134.418 67.9176 137.828 69.7309C139.478 70.6092 141.038 71.4384 143.223 73.0707C144 73.6511 144.159 74.7513 143.579 75.528C143.234 75.9899 142.706 76.2336 142.17 76.2336C141.805 76.2336 141.437 76.12 141.121 75.8845C139.15 74.4125 137.773 73.6796 136.178 72.8315C132.611 70.9344 128.172 68.5733 114.997 57.1166C114.265 56.4804 114.188 55.3712 114.824 54.6395C115.461 53.907 116.57 53.8302 117.302 54.4664Z%27 fill=%27%23EDF2F4%27/%3E%3Cpath d=%27M78.3449 162.094C78.4052 162.077 84.4097 160.299 89.4454 151.215C89.9155 150.367 90.9839 150.061 91.8325 150.53C92.6806 151 92.9868 152.069 92.517 152.917C86.779 163.27 79.5987 165.389 79.2963 165.475C79.1372 165.519 78.9774 165.541 78.82 165.541C78.0532 165.541 77.3488 165.034 77.1306 164.26C76.8675 163.326 77.4112 162.356 78.3449 162.094Z%27 fill=%27%23EDF2F4%27/%3E%3Cpath d=%27M91.0748 109.611C87.9771 104.547 84.3361 102.295 84.2647 102.252C83.4347 101.755 83.1624 100.68 83.6574 99.848C84.1527 99.0139 85.231 98.7404 86.0639 99.2361C86.2386 99.3398 90.3865 101.848 93.956 107.593C97.204 112.82 100.598 121.872 98.3207 135.308C98.1753 136.165 97.4325 136.771 96.5914 136.771C96.4943 136.771 96.3951 136.762 96.296 136.746C95.34 136.584 94.6963 135.678 94.8583 134.722C96.5248 124.888 95.252 116.439 91.0748 109.611Z%27 fill=%27%23EDF2F4%27/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id=%27clip0_109_748%27%3E%3Crect width=%27203%27 height=%27203%27 fill=%27white%27 transform=%27matrix%28-1 0 0 1 203 0%29%27/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        width: 200px;
+        height: 200px;
+        bottom: 30px;
+        right: 0;
+    }
+footer p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (min-width: 1024px) {
 
-  .footer-menu {
-    text-align: right;
+  footer p {
+    max-width: 290px;
   }
 }
-.footer-menu ul {
-  margin-left: 0px;
-}
-.footer-menu ul li {
-  list-style-type: none;
+footer .title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (min-width: 1024px) {
 
-  .footer-menu ul li {
-    display: inline-block;
+  footer .title {
+    font-size: 18px;
   }
-.footer-menu ul li:not(:first-child) {
-                    margin-left: 2rem
-            }
+}
+.logo__footer img {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+
+  .logo__footer img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.content__footer p {
+  margin-top: 1.75rem;
+  margin-bottom: 0px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.social__footer {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+@media (min-width: 1024px) {
+
+  .social__footer {
+    justify-content: flex-start;
+  }
+}
+.social__footer a {
+  display: flex;
+  height: 1.75rem;
+  width: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(38 70 83 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social__footer a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 157 143 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.locations__footer .item__location__footer:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.locations__footer .item__location__footer h3 {
+  margin-bottom: 0.25rem;
+  font-size: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.locations__footer .item__location__footer p {
+  margin-bottom: 0px;
 }
 @font-face {
   font-family: 'icomoon';
@@ -1678,6 +1750,25 @@ blockquote p {
   --tw-text-opacity: 1;
   color: rgb(43 45 66 / var(--tw-text-opacity));
 }
+.site__nav a {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.site__nav a:visited {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.site__nav a:hover {
+            opacity: 0.2;
+            transition: all ease-in-out 5s;
+            text-decoration: underline !important;
+            text-underline-offset: 3px;
+        }
+.site__nav .current-menu-item a {
+            text-decoration: underline !important;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px !important;
+        }
 .visible {
   visibility: visible;
 }
@@ -1700,11 +1791,18 @@ blockquote p {
   margin-left: auto;
   margin-right: auto;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .mt-8 {
   margin-top: 2rem;
@@ -1807,21 +1905,21 @@ blockquote p {
 .border-none {
   border-style: none;
 }
-.bg-gray-100 {
+.bg-alternate-1 {
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  background-color: rgb(38 70 83 / var(--tw-bg-opacity));
 }
-.bg-red-300 {
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+  background-color: rgb(42 157 143 / var(--tw-bg-opacity));
 }
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
-.bg-primary {
+.bg-gray-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(42 157 143 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .p-0 {
   padding: 0px;
@@ -1902,18 +2000,23 @@ blockquote p {
   letter-spacing: 0em;
   text-transform: uppercase;
 }
+.title--body {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
 @media (min-width: 768px) {
 
-  .md\:w-3\/12 {
-    width: 25%;
-  }
-
-  .md\:w-9\/12 {
-    width: 75%;
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
   }
 }
 @media (min-width: 1024px) {
@@ -1930,12 +2033,24 @@ blockquote p {
     display: none;
   }
 
+  .lg\:w-5\/12 {
+    width: 41.666667%;
+  }
+
   .lg\:w-4\/12 {
     width: 33.333333%;
   }
 
+  .lg\:w-3\/12 {
+    width: 25%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:items-center {
+    align-items: center;
   }
 
   .lg\:justify-start {
@@ -1946,8 +2061,20 @@ blockquote p {
     justify-content: flex-end;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:title--6 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    letter-spacing: 0em;
+    text-transform: uppercase;
   }
 }
 

@@ -1,0 +1,24 @@
+.site__nav {
+    a {
+        @apply text-white !important;
+
+        &:visited {
+            @apply text-white;
+        }
+
+        &:hover {
+            opacity: 0.2;
+            transition: all ease-in-out 5s;
+            text-decoration: underline !important;
+            text-underline-offset: 3px;
+        }
+    }
+
+    .current-menu-item {
+        a {
+            text-decoration: underline !important;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px !important;
+        }
+    }
+}
