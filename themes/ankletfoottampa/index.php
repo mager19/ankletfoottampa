@@ -15,8 +15,28 @@
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/hero', 'content'); ?>
-<!-- /Hero Header -->
+<?php
+$page_id = get_queried_object_id();
+
+?>
+<div class="experience">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap">
+            <?php
+
+            $subtitle = get_field('subtitle', $page_id);
+            $title = get_field('title', $page_id);
+            $content = get_field('title_content', $page_id);
+
+            ?>
+            <?php get_template_part('template-parts/items/item', 'title', array(
+                'subtitle' => $subtitle,
+                'title'    => $title,
+                'content'    => $content,
+            )); ?>
+        </div>
+    </div>
+</div>
 
 <div class="index__container py-8 bg-slate-200">
     <div class="container mx-auto">

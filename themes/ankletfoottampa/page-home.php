@@ -30,7 +30,36 @@ get_header(); ?>
 </div>
 
 
+<div class="experience__home">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <?php
+                // Check value exists.
+                if (have_rows('page_blocks')) :
+                    // Loop through rows.
+                    while (have_rows('page_blocks')) : the_row();
+                        // Case: Paragraph layout.
+                        if (get_row_layout() == 'block_title') :
+                            $subtitle = get_sub_field('subtitle');
+                            $title = get_sub_field('title');
+                            $content = get_sub_field('title_content');
+                        endif;
 
+                    // End loop.
+                    endwhile;
+                endif;
+
+                ?>
+                <?php get_template_part('template-parts/items/item', 'title', array(
+                    'subtitle' => $subtitle,
+                    'title'    => $title,
+                    'content'    => $content,
+                )); ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

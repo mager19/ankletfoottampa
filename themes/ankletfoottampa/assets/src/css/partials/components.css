@@ -33,3 +33,27 @@
         }
     }
 }
+
+.title__section {
+    @apply px-4 py-10 md:py-12;
+    span {
+        @apply text-[18px] font-normal;
+
+        span,
+        strong {
+            @apply text-primary font-bold;
+        }
+    }
+
+    .title {
+        @apply title--4 md:title--3 font-bold text-text mt-4  lg:max-w-[480px];
+
+        span {
+            @apply title--4 md:title--3 text-primary;
+        }
+    }
+
+    p {
+        @apply text-text mb-0 lg:max-w-[550px];
+    }
+}
