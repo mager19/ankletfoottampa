@@ -17,6 +17,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" href="<?php the_field('fps_favicon', 'option'); ?>">
 
+    <!-- Todo: Falta favicon -->
+
     <!--/Favicon-->
     <meta name="msapplication-TileColor" content="#d65a45">
     <meta name="theme-color" content="#d65a45">

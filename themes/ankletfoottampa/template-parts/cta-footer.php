@@ -14,12 +14,12 @@ $loop = new WP_Query($args);
 
 if ($loop->have_posts()) :
   while ($loop->have_posts()) : $loop->the_post(); ?>
-    <div class="cta">
+    <div class="cta py-10 md:py-12 lg:py-16">
       <div class="container mx-auto">
         <div class="flex px-4">
-          <div class="about-cta">
+          <div class="about-cta w-full">
             <div>
-              <h4 class="title-entry"><?php the_title(); ?></h4>
+              <h3 class="title"><?php the_title(); ?></h3>
               <?php the_content(); ?>
             </div>
           </div>

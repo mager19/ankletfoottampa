@@ -7,5 +7,6 @@
 @import "./partials/icons.css";
 @import "./partials/topbar.css";
 @import "./partials/header.css";
+@import "./partials/components.css";
 
 @import "tailwindcss/utilities";
