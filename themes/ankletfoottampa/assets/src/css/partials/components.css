@@ -1,15 +1,35 @@
 .btn {
-    @apply px-10 py-3 lg:py-4 lg:px-20 rounded-full font-bold inline-flex duration-500 transition-all ease-in-out;
+    @apply px-10 py-3 lg:px-12 rounded-full font-bold inline-flex duration-300 transition-all ease-in-out;
 
     &--primary {
-        @apply bg-primary text-white border-2 border-primary;
+        @apply bg-primary text-white;
 
         &:hover {
-            @apply bg-white text-alternate-1 border-alternate-1 !important;
+            @apply bg-white text-alternate-1 !important;
         }
 
         &:visited {
             @apply text-white;
+        }
+
+        &--dark {
+            @apply bg-alternate-1 text-white  !important;
+
+            &:hover {
+                @apply bg-white text-alternate-1 !important;
+            }
+        }
+    }
+
+    &--outline {
+        @apply bg-white text-alternate-1;
+
+        &:hover {
+            @apply bg-secondary text-white !important;
+        }
+
+        &:visited {
+            @apply text-alternate-1;
         }
     }
 }

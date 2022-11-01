@@ -2,10 +2,7 @@
 <div class="header__inside interpage bg-gray-100 h-48 flex items-center">
     <div class="container mx-auto">
         <div class="hero flex flex-wrap justify-center">
-            <!--Breadcrumbs-->
-            <div class="w-full p-0 flex justify-center">
-                <?php get_template_part('template-parts/content', 'breadcrumbs'); ?>
-            </div>
+
             <!--/Breadcrumbs-->
             <?php
             if (is_home()) {

@@ -18,6 +18,7 @@
     <link rel="icon" href="<?php the_field('fps_favicon', 'option'); ?>">
 
     <!-- Todo: Falta favicon -->
+    <!-- Todo: Falta menu Mobile -->
 
     <!--/Favicon-->
     <meta name="msapplication-TileColor" content="#d65a45">
@@ -30,7 +31,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <div id="page" class="site">
+    <div id="page" class="site overflow-x-hidden">
 
         <!-- Header -->
         <?php get_template_part("template-parts/top", "bar"); ?>
