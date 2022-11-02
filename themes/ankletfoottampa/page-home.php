@@ -57,6 +57,21 @@ get_header(); ?>
                     'content'    => $content,
                 )); ?>
             </div>
+
+            <?php
+            $args = array('post_type' => 'foot_condition', 'posts_per_page' => -1);
+            $loop = new WP_Query($args);
+            if ($loop->have_posts()) : ?>
+                <div class="container__conditions grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 mb-12 lg:mb-14">
+                    <?php
+                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                        <?php get_template_part('template-parts/items/item-foot', 'condition'); ?>
+                    <?php endwhile; ?>
+                    <!-- post navigation -->
+                </div>
+            <?php else : ?>
+                <!-- no posts found -->
+            <?php endif; ?>
         </div>
     </div>
 </div>
