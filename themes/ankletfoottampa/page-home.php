@@ -28,7 +28,7 @@ get_header(); ?>
         </div>
     </div>
 </div>
-
+<?php wp_reset_query(); ?>
 
 <div class="experience__home">
     <div class="container mx-auto">
@@ -77,6 +77,113 @@ get_header(); ?>
 </div>
 
 
+<?php
+$args = array(
+    'post_type' => 'cta',
+    'posts_per_page' => -1,
+
+);
+$loop = new WP_Query($args);
+
+if ($loop->have_posts()) :
+    while ($loop->have_posts()) : $loop->the_post(); ?>
+        <div class="cta__dark py-10 md:py-12 lg:py-16">
+            <div class="container mx-auto">
+                <div class="flex px-4">
+                    <div class="about-cta w-full">
+                        <div>
+                            <h3 class="title"><?php the_title(); ?></h3>
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php endwhile;
+    wp_reset_postdata();
+endif; ?>
+
+<div class="our__team">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <?php
+                $subtitle = get_field('our_team_subtitle');
+                $title = get_field('our_team_title');
+                ?>
+                <?php get_template_part('template-parts/items/item', 'title', array(
+                    'subtitle' => $subtitle,
+                    'title'    => $title,
+                )); ?>
+            </div>
+
+            <?php
+            $args = array('post_type' => 'our_team', 'posts_per_page' => -1);
+            $loop = new WP_Query($args);
+            if ($loop->have_posts()) : ?>
+                <div class="container__our__team grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 mb-12">
+                    <?php
+                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                        <?php get_template_part('template-parts/items/item-team', 'member'); ?>
+                    <?php endwhile; ?>
+                    <!-- post navigation -->
+                </div>
+            <?php else : ?>
+                <!-- no posts found -->
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div class="blog__home">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap">
+            <div class="w-full title__blog px-4 flex justify-between items-center">
+                <div class="title__blog__left">
+                    <span>Blog</span>
+                    <h5 class='title'>Recent Blog Posts</h5>
+                </div>
+
+                <div class="title__blog__right hidden md:flex">
+                    <a href="<?php echo esc_url(get_bloginfo('url')); ?>/news/">View All</a>
+                </div>
+            </div>
+
+            <?php
+            $args = array('post_type' => 'post', 'posts_per_page' => 3);
+            $loop = new WP_Query($args);
+            if ($loop->have_posts()) : ?>
+                <div class="container__blog px-4 gap-4 md:gap-y-2 md:gap-x-6 lg:gap-x-8 flex flex-wrap md:grid mb-12">
+                    <?php
+                    $counter = 1;
+                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                        <div class="item__home__blog<?php echo $counter; ?>">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                                <span class='flex mt-4'>
+                                    <?php $post_date = get_the_date('j F Y');
+                                    echo $post_date; ?>
+                                </span>
+                                <h6 class="title"><?php the_title(); ?></h6>
+                                <?php if ($counter == 1) { ?>
+                                    <p>
+                                        <?php
+                                        echo wp_trim_words(get_the_content(), 20, '...'); ?>
+                                    </p>
+                                <?php
+                                } ?>
+                            </a>
+                        </div>
+                        <?php $counter++; ?>
+                    <?php endwhile; ?>
+                    <!-- post navigation -->
+                </div>
+            <?php else : ?>
+                <!-- no posts found -->
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 <?php
 get_footer();
