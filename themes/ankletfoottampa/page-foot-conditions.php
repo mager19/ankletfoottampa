@@ -37,11 +37,21 @@ get_header(); ?>
             <?php
             $args = array('post_type' => 'foot_condition', 'posts_per_page' => -1);
             $loop = new WP_Query($args);
-            if ($loop->have_posts()) : ?>
+            if ($loop->have_posts()) :
+                $counter = 1;
+            ?>
                 <div class="container__conditions grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 md:mb-14 px-4 lg:px-0">
                     <?php
                     while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <?php get_template_part('template-parts/items/item-foot', 'condition'); ?>
+                        <?php get_template_part(
+                            'template-parts/items/item-foot',
+                            'condition',
+                            array(
+                                'modalName' => 'data-izimodal-open="#modal-custom-footconditions' . $counter . '"',
+                                'counter' => $counter
+                            )
+                        ); ?>
+                        <?php $counter++; ?>
                     <?php endwhile; ?>
                     <!-- post navigation -->
                 </div>

@@ -150,3 +150,15 @@
         @apply text-xl lg:text-2xl mb-1;
     }
 }
+
+.our__team__page {
+    @apply relative;
+
+    .title {
+        @apply title--4 md:title--6 lg:text-[18px] font-bold text-text mt-4  lg:max-w-[800px];
+
+        span {
+            @apply title--4 md:title--3 text-primary;
+        }
+    }
+}

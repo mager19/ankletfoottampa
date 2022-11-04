@@ -5,6 +5,10 @@ import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import "izimodal";
+import "iziModal/css/iziModal.min.css";
+import "iziModal/js/iziModal.min.js";
+
 (function ($) {
     // Slick
     $(".slickDemo").slick({
@@ -17,5 +21,10 @@ import "slick-carousel/slick/slick-theme.css";
         autoplaySpeed: 3000,
         autoplay: true,
         speed: 500,
+    });
+
+    jQuery(function () {
+        /* Instantiating iziModal */
+        jQuery(".modalMenu").iziModal({});
     });
 })(jQuery);
