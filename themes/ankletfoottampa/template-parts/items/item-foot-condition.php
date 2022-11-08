@@ -25,7 +25,7 @@ $modalName = $args['modalName'];
 </div>
 
 
-<div id="modal-custom-footconditions<?php echo $args['counter'];  ?>" class="modalMenu">
+<div id="modal-custom-footconditions<?php echo $args['counter'];  ?>" class="modalMenu modalfoot">
     <div class="modal__header">
         <button data-iziModal-close class="icon-close">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,9 +36,16 @@ $modalName = $args['modalName'];
 
     </div>
 
-    <div class="modal__content relative">
+    <div class="modal__content relative px-8">
+        <?php the_post_thumbnail(); ?>
         <h5 class="title"><?php the_title(); ?></h5>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minima quas, minus at dicta explicabo! Sed dolor placeat veritatis consequatur vel voluptates, culpa consectetur non exercitationem. Optio, perspiciatis ipsum! Alias!
+        <?php $content = get_field('condition_content');
+        if ($content) { ?>
+            <p><?php echo $content; ?></p>
+        <?php
+        }
+        ?>
+        <a class="btn btn--primary mb-4" href="/schedule-an-appointment/">Schedule an Appointment</a>
     </div>
 
 </div>

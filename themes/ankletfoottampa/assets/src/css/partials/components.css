@@ -2,10 +2,10 @@
     @apply px-10 py-3 lg:px-12 rounded-full font-bold inline-flex duration-300 transition-all ease-in-out;
 
     &--primary {
-        @apply bg-primary text-white;
+        @apply bg-primary text-white border border-primary;
 
         &:hover {
-            @apply bg-white text-alternate-1 !important;
+            @apply bg-white text-alternate-1 border-alternate-1 !important;
         }
 
         &:visited {
@@ -225,5 +225,32 @@
                 @apply text-alternate-1 max-w-[400px] text-[15px];
             }
         }
+    }
+}
+
+.modal__header {
+    text-align: right;
+
+    button {
+        @apply bg-transparent border-0;
+
+        svg {
+            path {
+                stroke: #000;
+            }
+        }
+    }
+}
+
+.iziModal-content {
+    @apply px-4 pt-4 pb-8 !important;
+}
+
+.modalfoot {
+    img {
+        @apply flex mt-4 mb-8;
+    }
+    .iziModal-content {
+        @apply px-8 pt-4 pb-8 !important;
     }
 }
