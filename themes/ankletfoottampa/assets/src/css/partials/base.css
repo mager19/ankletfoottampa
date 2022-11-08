@@ -994,3 +994,25 @@ blockquote {
         }
     }
 }
+
+.content__page__title {
+    @apply pt-4 pb-8 text-center md:flex md:justify-between md:items-center relative lg:pt-10 lg:pb-12;
+
+    .title {
+        @apply text-white md:mb-0 title--4 md:title--3 lg:title--1;
+        text-transform: capitalize !important;
+    }
+}
+
+.site-header--inside {
+    @apply overflow-hidden relative;
+    &:before {
+        content: url("data:image/svg+xml,%3Csvg width='1440' height='230' viewBox='0 0 1440 230' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 13.8867L48 37.8993C96 61.9119 192 109.937 288 97.9307C384 85.9245 480 13.8867 576 1.88037C672 -10.1259 768 37.8993 864 73.9182C960 109.937 1056 133.95 1152 151.959C1248 169.969 1344 181.975 1392 187.978L1440 193.981V230H1392C1344 230 1248 230 1152 230C1056 230 960 230 864 230C768 230 672 230 576 230C480 230 384 230 288 230C192 230 96 230 48 230H0V13.8867Z' fill='%23249284'/%3E%3C/svg%3E%0A");
+        left: 0;
+        top: 20%;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
