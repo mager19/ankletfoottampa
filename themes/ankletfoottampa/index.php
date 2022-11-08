@@ -22,18 +22,23 @@ $page_id = get_queried_object_id();
 <div class="experience">
     <div class="container mx-auto">
         <div class="flex flex-wrap">
-            <?php
+            <div class="w-full lg:w-7/12 lg:pr-4">
+                <?php
 
-            $subtitle = get_field('subtitle', $page_id);
-            $title = get_field('title', $page_id);
-            $content = get_field('title_content', $page_id);
+                $subtitle = get_field('subtitle', $page_id);
+                $title = get_field('title', $page_id);
+                $content = get_field('title_content', $page_id);
 
-            ?>
-            <?php get_template_part('template-parts/items/item', 'title', array(
-                'subtitle' => $subtitle,
-                'title'    => $title,
-                'content'    => $content,
-            )); ?>
+                ?>
+                <?php get_template_part('template-parts/items/item', 'title', array(
+                    'subtitle' => $subtitle,
+                    'title'    => $title,
+                    'content'    => $content,
+                )); ?>
+            </div>
+            <div class="w-5/12 hidden lg:flex items-center pl-4">
+                <?php echo get_the_post_thumbnail($page_id); ?>
+            </div>
         </div>
     </div>
 </div>
