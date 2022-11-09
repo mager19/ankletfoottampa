@@ -43,7 +43,7 @@ $page_id = get_queried_object_id();
     </div>
 </div>
 
-<div class="index__container py-8 bg-slate-200">
+<div class="index__container pb-8">
     <div class="container mx-auto">
         <!-- List Post -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
@@ -66,7 +66,7 @@ $page_id = get_queried_object_id();
         <!-- End Pagination -->
     </div>
 </div>
-
+<?php wp_reset_query(); ?>
 
 <?php
 get_footer();

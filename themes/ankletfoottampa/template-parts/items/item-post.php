@@ -1,25 +1,20 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php
     $image = get_the_post_thumbnail();
-
     ?>
     <header class="header-post">
         <a href="<?php the_permalink(); ?>">
             <?php
             if ($image) {
                 echo $image;
-            } else {
-                $id = rand(5, 100);
-            ?>
-                <img class="w-full object-cover" src="https://picsum.photos/id/<?php echo $id; ?>/200/150" alt="">
-            <?php
             }
             ?>
         </a>
     </header>
 
-    <div class="info-post py-4">
-        <h2 class="text-title4">
+    <div class="info-post mt-4">
+        <span class="entry-date"><?php echo get_the_date(); ?></span>
+        <h2 class="title">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h2>
         <?php

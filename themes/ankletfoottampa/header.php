@@ -114,7 +114,7 @@
                     </div>
                     <div class="content__page__title z-10">
                         <h1 class='title'><?php
-                                            if (is_home()) {
+                                            if (is_home() || is_singular('post')) {
                                                 echo 'News';
                                             } else {
                                                 the_title();
