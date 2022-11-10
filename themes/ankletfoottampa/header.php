@@ -15,7 +15,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="icon" href="<?php the_field('fps_favicon', 'option'); ?>">
+    <link rel="icon" href="<?php the_field('favicon', 'option'); ?>">
 
     <!-- Todo: Falta favicon -->
     <!-- Todo: Falta menu Mobile -->
