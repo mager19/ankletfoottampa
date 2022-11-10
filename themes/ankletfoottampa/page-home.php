@@ -61,11 +61,20 @@ get_header(); ?>
             <?php
             $args = array('post_type' => 'foot_condition', 'posts_per_page' => -1);
             $loop = new WP_Query($args);
-            if ($loop->have_posts()) : ?>
+            if ($loop->have_posts()) :
+                $counter = 1;
+            ?>
                 <div class="container__conditions grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 mb-12 lg:mb-14">
                     <?php
                     while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <?php get_template_part('template-parts/items/item-foot', 'condition'); ?>
+                        <?php get_template_part(
+                            'template-parts/items/item-foot',
+                            'condition',
+                            array(
+                                'counter' => $counter
+                            )
+                        ); ?>
+                        <?php $counter++; ?>
                     <?php endwhile; ?>
                     <!-- post navigation -->
                 </div>
@@ -120,11 +129,16 @@ endif; ?>
             <?php
             $args = array('post_type' => 'our_team', 'posts_per_page' => -1);
             $loop = new WP_Query($args);
-            if ($loop->have_posts()) : ?>
+            if ($loop->have_posts()) :
+                $counter = 1;
+            ?>
                 <div class="container__our__team grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 mb-12">
                     <?php
                     while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <?php get_template_part('template-parts/items/item-team', 'member'); ?>
+                        <?php get_template_part('template-parts/items/item-team', 'member', array(
+                            'counter' => $counter
+                        )); ?>
+                        <?php $counter++; ?>
                     <?php endwhile; ?>
                     <!-- post navigation -->
                 </div>

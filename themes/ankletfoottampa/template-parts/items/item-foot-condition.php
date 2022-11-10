@@ -41,7 +41,7 @@ $modalName = $args['modalName'];
         <h5 class="title"><?php the_title(); ?></h5>
         <?php $content = get_field('condition_content');
         if ($content) { ?>
-            <p><?php echo $content; ?></p>
+            <?php echo $content; ?>
         <?php
         }
         ?>
