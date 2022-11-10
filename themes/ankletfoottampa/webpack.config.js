@@ -87,5 +87,6 @@ module.exports = {
             new CssMinizerPlugin(),
             new TerserPlugin(),
         ],
+        minimize: true,
     },
 };
