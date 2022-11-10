@@ -117,6 +117,8 @@
                         <h1 class='title'><?php
                                             if (is_home() || is_singular('post')) {
                                                 echo 'News';
+                                            } elseif (is_404()) {
+                                                echo 'Ooops :(';
                                             } else {
                                                 the_title();
                                             }
