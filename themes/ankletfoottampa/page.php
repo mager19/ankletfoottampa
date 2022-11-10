@@ -11,12 +11,7 @@
  */
 
 get_header(); ?>
-
-<!-- Hero Header -->
-<?php get_template_part('template-parts/hero', 'content'); ?>
-<!-- /Hero Header -->
-
-<div class="content__page py-8">
+<div class="content__page py-8 text-text">
     <div class="container mx-auto">
         <div class="flex flex-wrap px-4">
             <div class="w-full">
