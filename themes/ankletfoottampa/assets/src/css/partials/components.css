@@ -32,6 +32,20 @@
             @apply text-alternate-1;
         }
     }
+
+    &--forms {
+        @apply bg-[#082050] text-white;
+
+        &:hover {
+            @apply bg-secondary text-white !important;
+        }
+
+        &:visited,
+        &:focus,
+        &:active {
+            @apply text-white;
+        }
+    }
 }
 
 .experience {
