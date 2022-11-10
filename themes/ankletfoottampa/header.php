@@ -17,7 +17,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" href="<?php the_field('favicon', 'option'); ?>">
 
-    <!-- Todo: Falta favicon -->
+
+
     <!-- Todo: Falta menu Mobile -->
 
     <!--/Favicon-->
