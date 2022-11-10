@@ -112,7 +112,7 @@ if (!is_404()) {
 </footer>
 <!--/ Footer -->
 
-<div id="modal-custom-1b" class="modalMenu">
+<div id="modal-custom-1b" class="modalMenu menuModal">
     <div class="modal__header">
         <button data-iziModal-close class="icon-close">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@ if (!is_404()) {
 
     <div class="modal__content relative">
         <?php
-        $GETlogo = get_field('logo_site', 'option'); ?>
+        $GETlogo = get_field('logo', 'option'); ?>
         <a href="<?php echo esc_url(get_bloginfo('url')); ?>">
             <figure>
                 <?php if ($GETlogo) {

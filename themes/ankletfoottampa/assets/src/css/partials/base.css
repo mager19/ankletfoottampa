@@ -1072,3 +1072,27 @@ blockquote {
         }
     }
 }
+
+.menuModal {
+    .iziModal-content {
+        @apply bg-primary;
+
+        .modal__header button svg path {
+            stroke: #fff !important;
+        }
+
+        .modal__content {
+            @apply px-7 !important;
+            ul {
+                @apply ml-0 mt-5;
+
+                li {
+                    list-style: none;
+                    a {
+                        @apply text-white font-semibold;
+                    }
+                }
+            }
+        }
+    }
+}
