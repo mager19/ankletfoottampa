@@ -120,7 +120,10 @@
                                                 the_title();
                                             }
                                             ?></h1>
-                        <a class="btn btn--primary--dark" href="//localhost:3000/schedule-an-appointment/">Schedule an Appointment</a>
+                        <?php if (!is_page('schedule-an-appointment')) { ?>
+                            <a class="btn btn--primary--dark" href="//localhost:3000/schedule-an-appointment/">Schedule an Appointment</a>
+                        <?php
+                        } ?>
                     </div>
                 </div>
             </header>
