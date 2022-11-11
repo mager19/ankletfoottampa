@@ -163,7 +163,7 @@
         @apply relative;
 
         img {
-            @apply h-[250px] object-cover;
+            @apply h-[350px] object-cover;
             border-radius: 5px;
         }
 
