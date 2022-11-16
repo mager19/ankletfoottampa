@@ -89,7 +89,7 @@ get_header(); ?>
                             'template-parts/items/item-foot',
                             'condition',
                             array(
-                                'modalName' => 'data-izimodal-open="#modal-custom-footconditions' . $counter . '"',
+                                'modalName' => '',
                                 'counter' => $counter
                             )
                         ); ?>
