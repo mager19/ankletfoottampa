@@ -39,7 +39,7 @@ get_header(); ?>
                     <h3 class="title mb-0 text-text">Common Foot Conditions</h3>
                     <p class='text-text'>Click on each Foot condition to see more information.</p>
                 </div>
-                <div class="container__conditions grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 md:mb-14 px-4 lg:px-0 w-full">
+                <div class="container__conditions grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12 md:mb-14 px-4 lg:px-0 w-full">
                     <?php $counter = 1; ?>
                     <?php while (have_rows('foot_conditions_lists')) : the_row(); ?>
 
