@@ -1096,3 +1096,34 @@ blockquote {
         }
     }
 }
+
+.item__conditions {
+    @apply cursor-pointer rounded-lg transition-all duration-500 ease-in-out;
+    &__title {
+        @apply flex flex-col p-4;
+
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        span {
+            @apply title--6 text-text;
+            text-transform: capitalize !important;
+        }
+    }
+
+    &:hover {
+        @apply bg-dark-3;
+
+        span {
+            @apply text-white;
+        }
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}

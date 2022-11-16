@@ -157,6 +157,7 @@
 
     span {
         @apply text-secondary text-[14px] font-semibold;
+        line-height: 100%;
     }
 
     .image__member {
@@ -233,7 +234,7 @@
         .left {
             @apply w-full md:w-[300px] mb-4 md:mb-0;
             img {
-                @apply h-full w-full md:w-[300px] object-cover;
+                @apply h-full w-full md:w-[300px] md:h-[400px] object-cover;
                 border-radius: 10px;
             }
         }

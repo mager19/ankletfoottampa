@@ -29,7 +29,7 @@ get_header(); ?>
                 )); ?>
             </div>
 
-            <div class="w-5/12 hidden lg:flex items-center pl-4">
+            <div class="w-5/12 hidden lg:flex items-center pl-4 md:mt-10">
                 <?php the_post_thumbnail(); ?>
             </div>
         </div>
@@ -37,7 +37,7 @@ get_header(); ?>
 </div>
 
 <?php if (have_rows('locations', 'option')) : ?>
-    <div class="locations__info pb-10">
+    <div class="locations__info pb-10 mt-8 md:mt-12">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-10 md:gap-6 md:grid-cols-2 px-4 lg:w-9/12 lg:mx-auto">
                 <?php while (have_rows('locations', 'option')) : the_row(); ?>
