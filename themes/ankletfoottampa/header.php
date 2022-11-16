@@ -124,7 +124,7 @@
                                             }
                                             ?></h1>
                         <?php if (!is_page('schedule-an-appointment')) { ?>
-                            <a class="btn btn--primary--dark" href="//localhost:3000/schedule-an-appointment/">Schedule an Appointment</a>
+                            <a class="btn btn--primary--dark" href="<?php echo esc_url(get_bloginfo('url')); ?>/schedule-an-appointment/">Schedule an Appointment</a>
                         <?php
                         } ?>
                     </div>
