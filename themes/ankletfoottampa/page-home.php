@@ -145,25 +145,32 @@ endif; ?>
             <?php else : ?>
                 <!-- no posts found -->
             <?php endif; ?>
+            <?php wp_reset_query(); ?>
         </div>
     </div>
 </div>
 
-<div class="blog__home">
-    <div class="container mx-auto">
-        <div class="flex flex-wrap">
-            <div class="w-full title__blog px-4 flex justify-between items-center">
-                <div class="title__blog__left">
-                    <span>Blog</span>
-                    <h5 class='title'>Recent Blog Posts</h5>
+<?php $shortcode = get_field('social_feed_shortcode');
+
+
+if ($shortcode) { ?>
+    <div class="blog__home">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full title__blog px-4 flex justify-between items-center">
+                    <div class="title__blog__left">
+                        <span>Instagram</span>
+                        <h5 class='title'>Follow Us</h5>
+                    </div>
                 </div>
 
-                <div class="title__blog__right hidden md:flex">
-                    <a href="<?php echo esc_url(get_bloginfo('url')); ?>/news/">View All</a>
+                <div class="container mx-auto mb-12">
+                    <div class="flex flex-wrap">
+                        <?php echo $shortcode; ?>
+                    </div>
                 </div>
-            </div>
 
-            <?php
+                <?php /*
             $args = array('post_type' => 'post', 'posts_per_page' => 3);
             $loop = new WP_Query($args);
             if ($loop->have_posts()) : ?>
@@ -194,10 +201,15 @@ endif; ?>
                 </div>
             <?php else : ?>
                 <!-- no posts found -->
-            <?php endif; ?>
+            <?php endif;  */ ?>
+            </div>
         </div>
     </div>
-</div>
+<?php
+}
+?>
+
+
 
 <?php
 get_footer();
