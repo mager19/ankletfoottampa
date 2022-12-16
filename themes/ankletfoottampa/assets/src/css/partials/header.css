@@ -41,7 +41,7 @@
     }
 
     &:before {
-        @apply absolute w-[250px] h-[250px] opacity-50 lg:opacity-100;
+        @apply hidden absolute w-[250px] h-[250px] opacity-50 lg:opacity-100;
 
         right: 0;
         bottom: 0;
@@ -50,7 +50,7 @@
 
     @screen lg {
         &:before {
-            @apply absolute opacity-50 lg:opacity-100 w-[400px] h-[400px]  flex items-end justify-end;
+            @apply hidden absolute opacity-50 lg:opacity-100 w-[400px] h-[400px]  flex items-end justify-end;
             z-index: 2;
             right: 0;
 
